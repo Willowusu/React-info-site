@@ -1,16 +1,52 @@
-let page = (
-    <div>
-        <nav className="pt-5"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" alt="" height="50" /></nav>
-        <section className="pt-5">
-            <h1>Fun facts about React</h1>
-            <ul>
-                <li>Was first released in 2013</li>
-                <li>Was originally created by Jordan Walke</li>
-                <li>Has well over 100K stars on GitHub</li>
-                <li>Is maintained by Facebook</li>
-                <li>Powers thousands of enterprise apps, including mobile apps</li>
-            </ul>
-        </section>
-    </div>
-)
-ReactDOM.render(page, document.getElementById("root"))
+//Header.js will not be used because i have not configured webpack and as such can't use
+//the import or require statement on the clinet side
+function Header(){
+    return (
+        <header>
+            <nav className="nav">
+                <img src="mondayMusings.png" className="logo" />
+                <ul className="nav-items">
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
+    )
+
+}
+
+function Footer(){
+    return(
+        <footer><small>Copyright 2020 Owusu development. All Rights reserved</small></footer>
+    )
+}
+
+function MainContent(){
+    return(
+        <div>
+            <h1>Reasons I'm excited to leaarn React</h1>
+            <ol>
+                <li>I am learning React because it is fun</li>
+                <li>I want to be a versatile programmer</li>
+                <li>I want to have a neat portfolio</li>
+                <li>I am learning React because I want to make money</li>
+                <li>I am learning React because I want to be an asset anywhere i work</li>
+            </ol>
+         </div>
+    )
+}
+function App() {
+    return (
+        <div>
+            <Header />
+            <MainContent />
+            <Footer />    
+         
+        </div> 
+        )
+}
+
+
+
+ReactDOM.render(<App />, document.getElementById("root"))
